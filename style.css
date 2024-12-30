@@ -1,0 +1,928 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+  overflow: visible;
+  max-width: 100%;
+}
+body {
+  color: #333;
+  font-size: 0.875rem;
+  min-height: 100vh;
+  position: relative;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+a {
+  color: #333;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+a:hover {
+  opacity: 0.7;
+}
+img {
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+.wrapper {
+  width: 90vw;
+  margin: 0 auto;
+  padding: 0 0;
+  height: 100vh;
+  text-align: center;
+  z-index: 20;
+}
+.top-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 10px;
+  border-bottom: solid 1px #333;
+  height: 80px;
+  white-space: nowrap;
+}
+/* h2タグ */
+.content-title {
+  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 10px;
+  border-bottom: solid 1px #333;
+  height: 80px;
+  margin-bottom: 80px;
+}
+/* h3タグ */
+.section-title {
+  width: 500px;
+  margin: 0 auto;
+  font-size: 1.75rem;
+  font-weight: 100;
+}
+.text {
+  font-size: 1rem;
+}
+.site-title a {
+  width: 180px;
+  line-height: 1px;
+  display: block;
+}
+.bg {
+  background-color: black;
+  opacity: 1;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 10;
+}
+.fadein {
+  opacity: 0;
+  transform: translate(0, 50%);
+  transition: 2s;
+}
+.fadein.show {
+  transform: translate(0,0);
+  opacity: 1;
+}
+/* ボタンに関するCSS */
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  border-radius: 0.5rem;
+}
+a.btn-svg {
+  font-weight: 700;
+  line-height: 54px;
+  width: 204px;
+  height: 54px;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: transparent;
+}
+a.btn-svg svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+a.btn-svg svg rect {
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+  stroke: #9a9a9a;
+  stroke-width: 2;
+  stroke-dasharray: 200px, 16px;
+  stroke-dashoffset: 70px;
+}
+a.btn-svg:hover svg rect {
+  stroke-dashoffset: 284px;
+}
+a.btn-svg span {
+  color: #787878;
+}
+/* ボタンに関するCSS　終わり */
+
+.textblack {
+  color: #333;
+}
+.textwhite {
+  color: #fff;
+}
+.work-titleblack {
+  color: #333;
+  border-bottom: #333 solid 1px;
+}
+.work-titlewhite {
+  color: #fff;
+  border-bottom: #fff solid 1px;
+}
+.view-more {
+  position: relative;
+  z-index: 20;
+  margin: 60px auto 0 auto;
+}
+
+
+/* ------------------------------------------------
+- ヘッダー
+--------------------------------------------------*/
+#header {
+  display: flex;
+  height: 80px;
+  max-width: 100%;
+  align-items: center;
+  background: #ceeaff;
+  padding: 10px 20px 0 20px;
+}
+#header .site-title a {
+  width: 150px;
+  padding-top: 10px;
+}
+#navi {
+  width: 100%;
+  justify-items: end;
+}
+.menu {
+  display: flex;
+  height: 30px;
+}
+.menu li {
+  margin: 0 auto;
+}
+.menu li a {
+  font-size: 20px;
+}
+.menu li a img {
+  width: 18px;
+  margin-right: 8px;
+}
+
+
+/* ------------------------------------------------
+- TOP
+--------------------------------------------------*/
+.top {
+  background-color: #ceeaff;
+  margin-bottom: 50px;
+}
+.mainvisual {
+  height: 91vh;
+  width: 85%;
+}
+.sp-mainvisual {
+  display: none;
+}
+.top-text {
+  position: absolute;
+  top: 11%;
+  right: 5%;
+  transform: translate(0%, 0%);
+}
+
+
+/* ------------------------------------------------
+- service
+--------------------------------------------------*/
+#service {
+  margin: 150px auto 0 auto;
+}
+.service-section {
+  position: relative;
+  z-index: 20;
+}
+.service-section p {
+  position: relative;
+  z-index: 20;
+}
+#s-section-2 {
+  margin-top: 80px;
+}
+.service-img {
+  width: 450px;
+}
+#s-img1 {
+  position: absolute;
+  top: 18%;
+  left: 70%;
+  z-index: 20;
+}
+#s-img2 {
+  position: absolute;
+  top: 22%;
+  right: 70%;
+  z-index: 20;
+}
+
+/* ------------------------------------------------
+- work
+--------------------------------------------------*/
+#work {
+  position: relative;
+  z-index: 20;
+  margin-bottom: 0;
+}
+
+
+/* ------------------------------------------------
+- flow
+--------------------------------------------------*/
+#flow {
+  margin: 150px auto 0 auto;
+}
+#flows {
+  display: flex;
+}
+
+
+/*==================================================
+Q&Aのcss
+==================================================*/
+#question {
+  background-color: #ceeaff;
+  width: 100vw;
+  padding-top: 100px;
+}
+.qa {
+  max-width: 800px;
+  margin: 0 auto 10px auto;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 4px rgb(0 0 0 / 2%), 0 2px 3px -2px rgba(0 0 0 / 5%);
+  background-color: #fff;
+}
+.qa summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1em 2em 1em 3em;
+  color: #333333;
+  font-weight: 600;
+  cursor: pointer;
+  height: 50px;
+}
+.qa summary::before,
+.qa p::before {
+  position: absolute;
+  left: 1em;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+.qa summary::before {
+  color: #75bbff;
+  content: "Q";
+}
+.qa summary::after {
+  transform: translateY(-25%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  margin-left: 10px;
+  border-bottom: 3px solid #333333b3;
+  border-right: 3px solid #333333b3;
+  content: '';
+  transition: transform .5s;
+}
+.qa[open] summary::after {
+  transform: rotate(225deg);
+}
+.qa p {
+  position: relative;
+  transform: translateY(-10px);
+  opacity: 0;
+  margin: 0;
+  padding: .3em 3em 1.5em;
+  color: #333;
+  transition: transform .5s, opacity .5s;
+  text-align: left;
+}
+.qa[open] p {
+  transform: none;
+  opacity: 1;
+}
+.qa p::before {
+  color: #ff8d8d;
+  line-height: 1.2;
+  content: "A";
+}
+
+
+/* ------------------------------------------------
+- contact
+--------------------------------------------------*/
+#contact {
+  margin: 150px auto 0 auto;
+}
+.contact-img {
+  width: 450px;
+}
+.contact-btn {
+  margin-top: 0;
+}
+a.contact-svg {
+  width: 400px;
+}
+#SP-contact-btn {
+  display: none;
+}
+
+
+/* ------------------------------------------------
+- footer
+--------------------------------------------------*/
+#footer {
+  display: flex;
+  height: 230px;
+  max-width: 100%;
+  background: #ceeaff;
+  padding: 10px 20px 0 20px;
+}
+#footer .site-title a {
+  width: 150px;
+  padding-top: 10px;
+}
+.inner {
+  width: 300px;
+  text-align:start;
+}
+.footer-navi {
+  margin: 0 auto;
+  width: 100%;
+  line-height: 160px;
+  text-align: center;
+}
+.footer-menu {
+  display: flex;
+}
+.footer-menu li {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+.footer-menu a img {
+  width: 25px;
+}
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {
+  /*横幅94%で左右に余白を持たせて中央寄せ*/
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.slider img {
+  width: 18vw; /*スライダー内の画像を60vwにしてレスポンシブ化*/
+  height: auto;
+}
+.slider .slick-slide {
+  transform: scale(0.8); /*左右の画像のサイズを80%に*/
+  transition: all 1.5s; /*拡大や透過のアニメーションを0.5秒で行う jsのspeedと同義*/
+  opacity: 0.5; /*透過50%*/
+}
+.slider .slick-slide.slick-center {
+  transform: scale(1); /*中央の画像のサイズだけ等倍に*/
+  opacity: 1; /*透過なし*/
+}
+
+/*矢印の設定*/
+/*戻る、次へ矢印の位置*/
+.slick-prev,
+.slick-next {
+  position: absolute; /*絶対配置にする*/
+  top: 42%;
+  cursor: pointer; /*マウスカーソルを指マークに*/
+  outline: none; /*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #666; /*矢印の色*/
+  border-right: 2px solid #666; /*矢印の色*/
+  height: 15px;
+  width: 15px;
+  z-index: 30;
+}
+.slick-prev {
+  /*戻る矢印の位置と形状*/
+  left: -1.5%;
+  transform: rotate(-135deg);
+}
+.slick-next {
+  /*次へ矢印の位置と形状*/
+  right: -1.5%;
+  transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+.slick-dots {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width: 8px; /*ドットボタンのサイズ*/
+  height: 8px; /*ドットボタンのサイズ*/
+  display: block;
+  border-radius: 50%;
+  background: #ccc; /*ドットボタンの色*/
+}
+.slick-dots .slick-active button {
+  background: #333; /*ドットボタンの現在地表示の色*/
+}
+
+/*-------------------------------------------
+page-Works
+-------------------------------------------*/
+#posts-list {
+  display: block;
+  height: auto;
+  width: auto;
+  margin: 0 auto;
+  padding: 100px 0;
+  background-color: #eef8ff;
+}
+.indication {
+  display: grid;
+  width: 70vw;
+  margin: 0 auto;
+}
+.indication-li {
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+}
+.post-img{
+  width: 300px;
+  height: 300px;
+}
+.indication-li:nth-child(2n) {
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+}
+.indication-li:nth-child(2n-1) {
+  justify-content: flex-start;
+}
+.indication-text {
+   align-items: center;
+   text-align: left;
+   padding: 0 20px 0 20px;
+}
+.post-category {
+  position: relative;
+  display: inline-block;
+  padding: 0 30px;
+  font-weight: normal;
+  margin: 0 20px;
+}
+.post-category:before, .post-category:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background-color: black;
+}
+.post-category:before {
+  left:0;
+}
+.post-category:after {
+  right: 0;
+}
+
+/*-------------------------------------------
+contact form
+-------------------------------------------*/
+input,
+textarea {
+  width: 100%;
+  border: solid 1px #c8c8c8;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 0;
+}
+input[type="submit"]:hover {
+  opacity: 0.7;
+}
+
+.content-form-container {
+  width: auto;
+  margin: 0 auto;
+}
+.wpcf7-form {
+  width: auto;
+  margin: 0 auto;
+}
+
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 915px) {
+  /*-------------------------------------------
+  header
+  -------------------------------------------*/
+  /*
+  ハンバーガ―メニュー
+  */
+  .hamburger {
+    width: 100px;
+    height: 100px;
+    background-color: #ceeaff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 30;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .hamburger:hover {
+    opacity: 0.7;
+  }
+  .hamburger span {
+    width: 50px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 25px;
+    transition: 0.3s ease-in-out;
+  }
+  .hamburger span:nth-child(1) {
+    top: 36px;
+  }
+  .hamburger span:nth-child(2) {
+    top: 50px;
+  }
+  .hamburger span:nth-child(3) {
+    top: 64px;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    top: 47px;
+    left: 25px;
+    background: #fff;
+    transform: rotate(-45deg);
+  }
+  .hamburger.active span:nth-child(2),
+  .hamburger.active span:nth-child(3) {
+    top: 47px;
+    background: #fff;
+    transform: rotate(45deg);
+  }
+
+  #navi {
+    width: 100%;
+    height: 100vh;
+    background-color: #ceeaff;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    opacity: 0;
+    text-align: center;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+    visibility: hidden;
+  }
+  #navi.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  #navi .logo {
+    width: 100px;
+    position: absolute;
+    top: 40px;
+    left: 50px;
+  }
+  #navi .menu {
+    margin: 80px 0 40px 0;
+    display:grid;
+  }
+  #navi .menu li {
+    margin-bottom: 20px;
+  }
+  #navi .menu a {
+    color: #333;
+    font-weight: bold;
+  }
+  #navi .btn {
+    width: 250px;
+    border: solid 1px #fff;
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    padding: 15px 0;
+    margin: 0 auto;
+    position: relative;
+    transition: 0.3s ease-in-out;
+  }
+  #navi .btn::after {
+    content: "　";
+    width: 250px;
+    border-right: solid 1px #fff;
+    border-bottom: solid 1px #fff;
+    padding: 15px 0;
+    position: absolute;
+    right: -6px;
+    bottom: -6px;
+  }
+  #navi .btn:hover {
+    background-color: #fff;
+    color: #ceeaff;
+  }
+
+  /*-------------------------------------------
+  TOP　背景画像をど真ん中かつテキスト下部へ
+  -------------------------------------------*/
+  .top {
+    height: auto;
+    display: grid;
+  }
+  .mainvisual {
+    display: none;
+  }
+  .sp-mainvisual {
+    display: block;
+    object-fit: cover;
+    height: 400px;
+  }
+  .top-text {
+    position: static;
+    width: 95vw;
+    margin: 0 auto 50px auto;
+  }
+  .top-title {
+    font-size: 1.28rem;
+    letter-spacing: 5px;
+    white-space: normal;
+  }
+  .text {
+    font-size: 0.8rem;
+  }
+  .content-title {
+    font-size: 1.8rem;
+  }
+
+
+  /*-------------------------------------------
+  Service
+  -------------------------------------------*/
+  #service {
+    height: auto;
+    margin-top: 0;
+    position: relative;
+  }
+  .section-title {
+    width: 90vw;
+  }
+  .service-img {
+    width: 250px;
+  }
+  .service-section {
+    margin-bottom: 150px;
+  }
+  #s-section-2 {
+    margin-bottom: 250px;
+  }
+  #s-img1 {
+    position: absolute;
+    top: 43%;
+    left: 15%;
+    z-index: 20;
+  }
+  #s-img2 {
+    position: absolute;
+    top: 90%;
+    right: 20%;
+    z-index: 20;
+  }
+  /*-------------------------------------------
+  Work　画像のズレ修正 or 3つ表示可能にする
+  -------------------------------------------*/
+  #work {
+    margin-top: 100px;
+  }
+  /*==================================================
+  スライダーのためのcss
+  ===================================*/
+  .slider img {
+    width: 208px; /*スライダー内の画像を60vwにしてレスポンシブ化*/
+  }
+  .posts-title {
+    width: 208px;
+  }
+
+
+  /*-------------------------------------------
+  Flow　縦表示
+  -------------------------------------------*/
+  #flow {
+    margin: 100px auto 50px auto;
+    height: auto;
+  }
+  #flows {
+    display:block;
+  }
+  #flows li {
+    margin-top: 150px;
+  }
+  #flows li:nth-child(1){
+    margin-top: 0;
+  }
+  #flows li p {
+    padding: 0;
+  }
+  
+  
+  /*-------------------------------------------
+  Question　横幅と立幅修正
+  -------------------------------------------*/
+  .qa {
+    max-width: 90vw;
+  }
+  #question {
+    height: auto;
+    background-color: #ceeaff;
+    padding-bottom: 50px;
+  }
+  #question-title {
+    font-size: 1.7rem;
+  }
+
+  /*-------------------------------------------
+  Contact　btnの表示幅修正
+  -------------------------------------------*/
+  .long-title {
+    white-space: nowrap;
+  }
+  #PC-contact-btn {
+    display: none;
+  }
+  a.contact-svg {
+    width: 300px;
+  }
+  #SP-contact-btn {
+    display: block;
+    margin-bottom: 100px;
+  }
+  #contact {
+    margin-bottom: 200px;
+  }
+
+  /*-------------------------------------------
+  Footer　nav を縦表示にする。
+  -------------------------------------------*/
+  .inner {
+    width: auto;
+    padding-bottom: 0;
+  }
+  .footer-navi {
+    line-height: normal;
+  }
+  .footer-menu {
+    height: 220px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+  }
+  .footer-menu li {
+    font-size: 1rem;
+  }
+  .footer-menu a img {
+    width: 20px;
+  }
+
+  /*-------------------------------------------
+  page-Works
+  -------------------------------------------*/
+  #posts-list {
+    display: grid;
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+    padding: 100px 0;
+    background-color: #eef8ff;
+  }
+  .indication {
+    display: grid;
+    width: 70vw;
+    margin: 0 auto;
+  }
+  .indication-li {
+    margin: 30px 0;
+    display: grid;
+    align-items: center;
+  }
+  .post-img{
+    width: 300px;
+    height: 300px;
+  }
+  .indication-li:nth-child(2n) {
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+  }
+  .indication-li:nth-child(2n-1) {
+    justify-content: flex-start;
+  }
+  .indication-text {
+    align-items: center;
+    text-align: center;
+    padding: 0 20px 0 20px;
+  }
+  .post-category {
+    position: relative;
+    display: inline-block;
+    padding: 0 30px;
+    font-weight: normal;
+    margin: 0 20px;
+  }
+  .post-category:before, .post-category:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    background-color: black;
+  }
+  .post-category:before {
+    left:0;
+  }
+  .post-category:after {
+    right: 0;
+  }
+  .post-title {
+    width: auto;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
